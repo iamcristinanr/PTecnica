@@ -10,6 +10,7 @@ public class Main {
         System.out.println("Write the number to choose the function: ");
         System.out.println("1. Calculate IMC ");
         System.out.println("2. Sum Array ");
+        System.out.println("3. Move Zero");
         System.out.println("4. Exit ");
 
         int option = scanner.nextInt();
@@ -38,6 +39,18 @@ public class Main {
 
                 System.out.println("The result of the sum of the list is: " + resultSum);
 
+            break;
+
+            case 3:
+
+                System.out.println("Insert a list of numbers separate by commas");
+                String inputUser2 = scanner.nextLine();
+
+                List<Integer> inputUserList2 = Sum.processList(inputUser2);
+
+                List<Integer> moveZeroList = MoveZero.moveZero(inputUserList2);
+                
+                System.out.println("The result of the sum of the list is: " + moveZeroList);
             break;
 
             case 4:

@@ -22,8 +22,8 @@ public class Sum {
     public static int sumList (List<Integer> listUser){
 
         Integer resultSum = 0;
-        for (Integer i : listUser){
-            resultSum += i;
+        for (Integer number : listUser){
+            resultSum += number;
 
         }
         return resultSum; 
