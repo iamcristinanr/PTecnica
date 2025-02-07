@@ -11,9 +11,11 @@ public class IMC {
             return "Normal";
         } else if (imc <= 30) {
             return "Sobrepeso";
-        } else {
+        } else if (imc > 30){
             return "Obeso";
+        } else {
+            return "Introduce a valid number";
         }
     }
-
 }
+
