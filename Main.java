@@ -9,7 +9,7 @@ public class Main {
 
         System.out.println("Write the number to choose the function: ");
         System.out.println("1. Calculate IMC ");
-        System.out.println("2. Sum Array ");
+        System.out.println("2. Sum digit ");
         System.out.println("3. Move Zero");
         System.out.println("4. Exit ");
 
@@ -31,26 +31,22 @@ public class Main {
             break;
             case 2:
             
-                System.out.println("Insert a list of numbers separate by commas");
-                String inputUser = scanner.nextLine();
+                System.out.println("Insert a numbers: ");
+                int inputUser = scanner.nextInt();
+                int resultSum = Sum.sumDigit(inputUser);
 
-                List<Integer> inputUserList = Sum.processList(inputUser);
-                int resultSum = Sum.sumList(inputUserList);
-
-                System.out.println("The result of the sum of the list is: " + resultSum);
+                System.out.println("The result of the sum is: " + resultSum);
 
             break;
-
             case 3:
 
-                System.out.println("Insert a list of numbers separate by commas");
+                System.out.println("Insert a list of elements separated by commas");
                 String inputUser2 = scanner.nextLine();
 
-                List<Integer> inputUserList2 = Sum.processList(inputUser2);
-
-                List<Integer> moveZeroList = MoveZero.moveZero(inputUserList2);
+                List<Object> inputUserList2 = MoveZero.processList(inputUser2);
+                List<Object> moveZeroList = MoveZero.moveZero(inputUserList2);
                 
-                System.out.println("The result of the sum of the list is: " + moveZeroList);
+                System.out.println("The list after move zeros: " + moveZeroList);
             break;
 
             case 4:

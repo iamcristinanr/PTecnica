@@ -1,31 +1,19 @@
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Sum {
 
+    public static int sumDigit(int number){
 
-    public static List<Integer> processList(String inputUser){
-
-        String[] numbers = inputUser.split(",");
-        List<Integer> listNumbers = new ArrayList<>();
-
-        for (String numberStr : numbers){
-            int number = Integer.parseInt(numberStr);
-            listNumbers.add(number);
+        int total = 0;
+        for (int i = 1 ; i <= number; i++){
+            //"temp" is aux variable to continue for and sum numbers greater than 9 
+            int temp = i;
+            while ( temp > 0){
+                // sum last digit to total
+                total += temp % 10;
+                // remove last digit and continue while
+                temp /= 10;
+            }
         }
-
-        return listNumbers;
-
-    }
-
-    public static int sumList (List<Integer> listUser){
-
-        Integer resultSum = 0;
-        for (Integer number : listUser){
-            resultSum += number;
-
-        }
-        return resultSum; 
-    }
+        return total; 
+    } 
 }
